@@ -1,0 +1,8 @@
+mlflow
+pandas
+numpy
+scikit-learn
+pyyaml
+joblib
+black
+matplotlib

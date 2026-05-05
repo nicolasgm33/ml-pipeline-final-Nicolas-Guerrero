@@ -1,0 +1,28 @@
+dataset:
+  url: "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
+  target_column: "outcome"
+  columns:
+    - pregnancies
+    - glucose
+    - blood_pressure
+    - skin_thickness
+    - insulin
+    - bmi
+    - diabetes_pedigree
+    - age
+    - outcome
+
+model:
+  type: "LogisticRegression"
+  max_iter: 1000
+  random_state: 42
+  test_size: 0.2
+
+mlflow:
+  tracking_dir: "mlruns"
+  experiment_name: "final-mlops-github-actions-mlflow"
+
+paths:
+  model_output: "models/model.pkl"
+  metrics_output: "reports/metrics.json"
+  report_output: "reports/classification_report.txt"
